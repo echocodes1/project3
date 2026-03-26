@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="light">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business Websites | Mr. Adeeb</title>
+
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+
+
+    <header>
+
+        <div class="logo">ADEEB<span>SERVICES</span></div>
+
+        <div class="nav-right">
+
+            <button onclick="toggleTheme()" id="theme-btn">🌙</button>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="marquee">
+
+        <div class="marquee-content">
+
+            <span>Unique Design</span> • <span>Fast Performance</span> • <span>SEO Optimized</span> • 
+
+            <span>Mobile First</span> • <span>WordPress Pro</span> • <span>Fixed Pricing</span> •
+
+            <span>Unique Design</span> • <span>Fast Performance</span> • <span>SEO Optimized</span> • 
+
+            <span>Mobile First</span> • <span>WordPress Pro</span> • <span>Fixed Pricing</span> •
+
+        </div>
+
+    </div>
+
+
+
+    <section class="hero">
+
+        <div class="container" data-aos="fade-up">
+
+            <span class="badge">Fixed Pricing • Fast Delivery</span>
+
+            <h1>Websites that help local businesses <span>get more customers</span></h1>
+
+            <p>I design fast, mobile-friendly websites for small businesses with clear pricing and fixed delivery time.</p>
+
+            <div class="status-indicator">
+
+                <span class="dot"></span> 
+
+                Next available slot: <strong>Monday, March 23</strong>
+
+            </div>
+
+            <p class="strong-line">Perfect for businesses that want more calls & WhatsApp inquiries.</p>
+
+            <br>
+
+            <a href="#pricing" class="btn-primary">View Pricing & Contact</a>
+
+        </div>
+
+    </section>
+
+
+
+    <section id="pricing" class="pricing">
+
+        <div class="container">
+
+            <h2 class="center-h">Simple Pricing. No Confusion.</h2>
+
+            <div class="price-grid">
+
+                <div class="price-card" data-aos="flip-left">
+
+                    <h3>Starter Website</h3>
+
+                    <div class="cost">₹4,999</div>
+
+                    <p class="outcome">Best for small businesses starting online</p>
+
+                    <ul>
+
+                        <li>1-Page Website</li>
+
+                        <li>WhatsApp & Call Button</li>
+
+                        <li>Mobile-responsive</li>
+
+                        <li>Basic SEO</li>
+
+                    </ul>
+
+                    <div class="time">⏱ 3 Working Days</div>
+
+                </div>
+
+                
+
+                <div class="price-card featured" data-aos="flip-right">
+
+                    <span class="pop">Popular</span>
+
+                    <h3>Business Website</h3>
+
+                    <div class="cost">₹9,999</div>
+
+                    <p class="outcome">Ideal for growing businesses needing trust</p>
+
+                    <ul>
+
+                        <li>Up to 5 Pages</li>
+
+                        <li>Contact Form</li>
+
+                        <li>Advanced SEO</li>
+
+                        <li>Google Maps Integration</li>
+
+                    </ul>
+
+                    <div class="time">⏱ 5-7 Working Days</div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="needs-section">
+
+        <div class="container" data-aos="fade-up">
+
+            <h2 style="text-align: center;">What I'll need to start:</h2>
+
+            <div class="needs-grid">
+
+                <div class="need-item">🏢 Business name & details</div>
+
+                <div class="need-item">🎨 Logo (if available)</div>
+
+                <div class="need-item">📝 Text/content (I'll guide you)</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="contact">
+
+        <div class="container" data-aos="zoom-in">
+
+            <h2>Start Your Project</h2>
+
+            <form id="projectForm">
+
+                <input type="text" id="userName" placeholder="Your Name" required>
+
+                <input type="text" id="bizName" placeholder="Business Name" required>
+
+                <input type="tel" id="userPhone" placeholder="WhatsApp Number" pattern="[0-9]{10}" required>
+
+                <select id="budget" required>
+
+                    <option value="">What is your budget?</option>
+
+                    <option value="4999">₹4,999</option>
+
+                    <option value="9999">₹9,999</option>
+
+                    <option value="discuss">Not sure (let's discuss)</option>
+
+                </select>
+
+                <button type="submit" class="btn-primary" id="submitBtn">I Agree & Want to Start</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+<div id="cursor"></div>
+
+<div style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:999; opacity:0.03; background: url('https://grainy-gradients.vercel.app/noise.svg');"></div>
+
+    <a href="https://wa.me/917064504701" class="whatsapp-btn">
+
+        💬 Quick Chat
+
+    </a>
+
+
+
+    <div id="successModal" class="modal">
+
+        <div class="modal-content">
+
+            <h2 id="congrats-text">🎉 Success!</h2>
+
+            <p>Redirecting you to WhatsApp to finalize details...</p>
+
+            <button onclick="closeModal()" class="btn-primary">Great!</button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
